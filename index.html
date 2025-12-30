@@ -10,36 +10,38 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <ul class="nav-left">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Skills</a></li>
-    </ul>
+  <!-- NAVBAR -->
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Skills</a></li>
+  </ul>
 
-    <div class="logo">
-      <a href="#home"><img src="assets/logo.png" alt="My Logo"></a>
-    </div>
+  <div class="logo">
+    <a href="#home"><img src="assets/logo.png" alt="My Logo"></a>
+  </div>
 
-    <ul class="nav-right">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Highlights</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <ul class="nav-right">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Highlights</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-    <!-- Hamburger button for mobile -->
-    <button class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- Hamburger button for mobile -->
+  <button class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <!-- Dark/Light mode button -->
-    <div class="theme-toggle">
-      <button id="theme-btn" aria-label="Toggle Dark/Light Mode">
-        <span id="theme-icon">🌙</span>
-      </button>
-    </div>
-  </nav>
+  <!-- Dark/Light mode button - STAYS OUTSIDE MENU -->
+  <div class="theme-toggle">
+    <button id="theme-btn" aria-label="Toggle Dark/Light Mode">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </div>
+</nav>
 
   <!-- HOME SECTION -->
   <section id="home" class="home-section">
@@ -184,7 +186,7 @@
         <img src="assets/emag.png" alt="Project 3">
         <div class="project-content">
           <h3>E-MAGAZINE</h3>
-          <p>A digital magazine created as the 2025 year-end project for Media Affairs, showcasing highlights, stories, and creative content from the year.</p>
+          <p>A digital magazine created as the 2025 year-end project for Media Affairs, showcasing highlights, stories, and creative content from the year. This one is soon to be released.</p>
           <p><strong>Role & Contributions:</strong> Student Editor who help in layout and design</p>
           <p><strong>Tools/Languages:</strong> Canva</p>
         </div>
@@ -422,10 +424,11 @@ rightBtn.addEventListener('click', () => {
   const navRight = document.querySelector('.nav-right');
 
   hamburger.addEventListener('click', () => {
-    navLeft.classList.toggle('show');
-    navRight.classList.toggle('show');
-    hamburger.classList.toggle('active');
-  });
+  navLeft.classList.toggle('show');
+  navRight.classList.toggle('show');
+  hamburger.classList.toggle('active');
+});
+
 </script>
 
 
