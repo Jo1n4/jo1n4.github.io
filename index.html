@@ -204,6 +204,15 @@
       <button class="carousel-btn left-btn">◀</button>
 
       <div class="blog-carousel">
+
+          <div class="blog-card">
+          <img src="assets/elem.png" alt="Life Moment 1">
+          <div class="blog-content">
+            <h3>Elementary</h3>
+            <p>Distansya or Ambulansya? rawr — baby rawr (ambot naunsa ko ari)</p>
+          </div>
+        </div>
+
         <div class="blog-card">
           <img src="assets/nikol (1).png" alt="Life Moment 1">
           <div class="blog-content">
@@ -261,6 +270,14 @@
         </div>
 
         <div class="blog-card">
+          <img src="assets/samar.png" alt="Life Moment 5">
+          <div class="blog-content">
+            <h3>Family  (3)</h3>
+            <p>The Samar–Leyte Getaway: Laagan Mode On, Memories Locked In</p>
+          </div>  
+        </div>
+
+        <div class="blog-card">
           <img src="assets/baboon2.png" alt="Life Moment 6">
           <div class="blog-content">
             <h3>Friends (1)</h3>
@@ -300,6 +317,22 @@
           </div>
         </div>
 
+        <div class="blog-card">
+          <img src="assets/hannah.png" alt="Life Moment 10">
+          <div class="blog-content">
+            <h3>Friends (6)</h3>
+            <p>My add-on chika buddy.. Hannah MARIE hehe</p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="assets/2a.png" alt="Life Moment 10">
+          <div class="blog-content">
+            <h3>Friends (7)</h3>
+            <p> BSIT 2A Year-End Party: Wrapping Up the Year with Joy and Laughter</p>
+          </div>
+        </div>
+
       <div class="blog-card">
           <img src="assets/media.png" alt="Life Moment 10">
           <div class="blog-content">
@@ -321,6 +354,22 @@
           <div class="blog-content">
             <h3>SSG Family</h3>
             <p>An organization that is both challenging and fulfilling.</p>
+          </div>
+      </div>
+
+      <div class="blog-card">
+          <img src="assets/sk.png" alt="Life Moment 10">
+          <div class="blog-content">
+            <h3>SK Family</h3>
+            <p>A responsibility that taught me leadership… with a side of fun.</p>
+          </div>
+      </div>
+
+      <div class="blog-card">
+          <img src="assets/rcy.png" alt="Life Moment 10">
+          <div class="blog-content">
+            <h3>RCY Family</h3>
+            <p>A family of volunteers, friendship, and shared experiences… miss you, RCY!</p>
           </div>
       </div>
       </div>
@@ -418,13 +467,52 @@ rightBtn.addEventListener('click', () => {
   const hamburger = document.querySelector('.hamburger');
   const navLeft = document.querySelector('.nav-left');
   const navRight = document.querySelector('.nav-right');
+  const navLinks = document.querySelectorAll('.nav-left a, .nav-right a');
 
+  // Helper function to close the menu with animation
+  function closeMenu() {
+    // 1. Add the closing class to trigger the animation
+    navLeft.classList.add('closing');
+    navRight.classList.add('closing');
+    
+    // 2. Remove the active state from the burger immediately
+    hamburger.classList.remove('active');
+
+    // 3. Wait for the animation to finish (400ms matches css 0.4s)
+    setTimeout(() => {
+      // Remove the .show class (hides it)
+      navLeft.classList.remove('show');
+      navRight.classList.remove('show');
+      
+      // Remove the .closing class (resets animation for next time)
+      navLeft.classList.remove('closing');
+      navRight.classList.remove('closing');
+    }, 400); 
+  }
+
+  // Helper function to open the menu
+  function openMenu() {
+    navLeft.classList.add('show');
+    navRight.classList.add('show'); 
+    hamburger.classList.add('active');
+  }
+
+  // Toggle Logic
   hamburger.addEventListener('click', () => {
-  navLeft.classList.toggle('show');
-  navRight.classList.toggle('show');
-  hamburger.classList.toggle('active');
-});
+    // Check if the menu is currently open
+    if (navLeft.classList.contains('show')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
 
+  // Close when clicking a link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
 </script>
 </body>
 </html>
