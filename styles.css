@@ -1126,3 +1126,68 @@ body[data-theme="light"] .footer a {
   }
 }
 
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Hamburger lines */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #f2e6d8;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  body[data-theme="light"] .nav-left,
+  body[data-theme="light"] .nav-right {
+    background: #fff;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-left.show,
+  .nav-right.show {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+

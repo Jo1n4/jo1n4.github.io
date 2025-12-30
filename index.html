@@ -27,6 +27,12 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+
     <!-- Dark/Light mode button -->
     <div class="theme-toggle">
       <button id="theme-btn" aria-label="Toggle Dark/Light Mode">
@@ -175,7 +181,7 @@
 
       <!-- Project Card 3 -->
       <div class="project-card">
-        <img src="assets/project11.png" alt="Project 3">
+        <img src="assets/emag.png" alt="Project 3">
         <div class="project-content">
           <h3>E-MAGAZINE</h3>
           <p>A digital magazine created as the 2025 year-end project for Media Affairs, showcasing highlights, stories, and creative content from the year.</p>
@@ -409,6 +415,19 @@ rightBtn.addEventListener('click', () => {
   carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
 });
 </script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLeft = document.querySelector('.nav-left');
+  const navRight = document.querySelector('.nav-right');
+
+  hamburger.addEventListener('click', () => {
+    navLeft.classList.toggle('show');
+    navRight.classList.toggle('show');
+    hamburger.classList.toggle('active');
+  });
+</script>
+
 
 </body>
 </html>
