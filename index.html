@@ -9,8 +9,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <!-- NAVBAR -->
+  <!--NAVBAR-->
 <nav class="navbar">
   <ul class="nav-left">
     <li><a href="#home">Home</a></li>
@@ -28,14 +27,14 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <!-- Hamburger button for mobile -->
+  <!--Hamburger button for mobile-->
   <button class="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <!-- Dark/Light mode button - STAYS OUTSIDE MENU -->
+  <!--Dark/Light mode button-->
   <div class="theme-toggle">
     <button id="theme-btn" aria-label="Toggle Dark/Light Mode">
       <span id="theme-icon">🌙</span>
@@ -98,7 +97,7 @@
             <div class="card-front">
               <h3>Programming & Web Development</h3>
               <p>Still enhancing my coding skills and continuously learning modern web technologies</p>
-              <span class="click-hint">Click the card</span> <!-- sulod sa card -->
+              <span class="click-hint">Click the card</span>
             </div>
    
             <div class="card-back">
@@ -113,7 +112,7 @@
             <div class="card-front">
               <h3>Photography</h3>
               <p>Capturing moments and stories through visuals while still improving this skill</p>
-              <span class="click-hint">Click the card</span> <!-- sulod sa card -->
+              <span class="click-hint">Click the card</span> 
             </div>
             <div class="card-back">
               <img src="assets/photography.png" alt="Photography Pic">
@@ -127,7 +126,7 @@
             <div class="card-front">
               <h3>Broadcasting</h3>
               <p>Understanding podcasting, audio recording, and media presentation while improving technical and delivery skills.</p>
-              <span class="click-hint">Click the card</span> <!-- sulod sa card -->
+              <span class="click-hint">Click the card</span>
             </div>
             <div class="card-back">
               <img src="assets/broadcast.png" alt="Editing Pic">
@@ -141,7 +140,7 @@
             <div class="card-front">
               <h3>Leadership</h3>
               <p>Inspiring and guiding others while sharpening my initiative, decision-making, and teamwork skills</p>
-              <span class="click-hint">Click the card</span> <!-- sulod sa card -->
+              <span class="click-hint">Click the card</span>
             </div>
             <div class="card-back">
               <img src="assets/leadership.png" alt="Design Pic">
@@ -183,7 +182,7 @@
 
       <!-- Project Card 3 -->
       <div class="project-card">
-        <img src="assets/emag.png" alt="Project 3">
+        <img src="assets/2025.png" alt="Project 3">
         <div class="project-content">
           <h3>E-MAGAZINE</h3>
           <p>A digital magazine created as the 2025 year-end project for Media Affairs, showcasing highlights, stories, and creative content from the year. This one is soon to be released.</p>
@@ -205,7 +204,6 @@
       <button class="carousel-btn left-btn">◀</button>
 
       <div class="blog-carousel">
-        <!-- Example Blog Post -->
         <div class="blog-card">
           <img src="assets/nikol (1).png" alt="Life Moment 1">
           <div class="blog-content">
@@ -246,7 +244,6 @@
           </div>
         </div>
 
-        <!-- Add more blog-cards as needed -->
          <div class="blog-card">
           <img src="assets/family1.png" alt="Life Moment 5">
           <div class="blog-content">
@@ -374,7 +371,6 @@
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
-// Set initial theme from localStorage
 if(localStorage.getItem('theme') === 'light') {
   body.setAttribute('data-theme', 'light');
   themeIcon.textContent = '☀️';
@@ -430,7 +426,5 @@ rightBtn.addEventListener('click', () => {
 });
 
 </script>
-
-
 </body>
 </html>

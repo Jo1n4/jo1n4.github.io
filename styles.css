@@ -1,27 +1,20 @@
-  /* =========================
-    RESET
-  ========================= */
+  /*RESET*/
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-  /* =========================
-    BODY
-  ========================= */
+  /*BODY*/
   body {
     font-family: 'Poppins', sans-serif;
     color: #f2e6d8;
     background: #0e0e0e;
     scroll-behavior: smooth;
   }
-  /* =========================
-    LIGHT MODE OVERRIDES (KEEP YOUR BACKGROUNDS)
-  ========================= */
+  /*LIGHT MODE OVERRIDES (KEEP YOUR BACKGROUNDS)*/
   body[data-theme="light"] {
     color: #1a1a1a;
-    /* background: keep default; don't override */
   }
 
   /* General text */
@@ -54,17 +47,15 @@
 
   /* Home Section */
   body[data-theme="light"] .home-section {
-    /* keep your custom background image */
     background-image: url('assets/wrose.png');
   }
 
   body[data-theme="light"] .home-section::before {
-    background: rgba(255,255,255,0.2); /* soft overlay for text visibility */
+    background: rgba(255,255,255,0.2);
   }
 
   /* Skills Section */
   body[data-theme="light"] .skills-section {
-    /* keep your custom background image */
     background-image: url('assets/vintagewhite.png');
   }
 
@@ -74,7 +65,7 @@
 
   /* About Section */
   body[data-theme="light"] .about-section {
-    background: #fff; /* only this section uses white background */
+    background: #fff;
   }
 
   /* Cards */
@@ -101,8 +92,7 @@
 
   /* Projects Section */
   body[data-theme="light"] .projects-section {
-    /* keep your dark-mode-like background if you want, or white if needed */
-    background: #ffffff; /* or remove if you have custom image */
+    background: #ffffff; 
   }
 
   body[data-theme="light"] .projects-section h2 { color: #111; }
@@ -117,9 +107,7 @@
   body[data-theme="light"] .project-content h3 { color: #111; }
   body[data-theme="light"] .project-content p { color: #444; }
 
-  /* =========================
-    NAVBAR
-  ========================= */
+  /*NAVBAR*/
   .navbar {
     display: flex;
     justify-content: center;
@@ -175,9 +163,7 @@
     border: 1px solid #d40000;
   }
 
-  /* =========================
-    HOME SECTION
-  ========================= */
+  /* HOME SECTION*/
   .home-section {
     position: relative;
     height: 98vh;
@@ -221,7 +207,7 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   }
 
-  /* Light mode adjustment */
+  /* Light mode*/
   body[data-theme="light"] .home-profile {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   }
@@ -273,9 +259,7 @@
     filter: invert(0);
   }
 
-  /* =========================
-    ABOUT SECTION
-  ========================= */
+  /*ABOUT SECTION*/
   .about-section {
     position: relative;
     min-height: 98vh;
@@ -369,9 +353,7 @@
   list-style: none;
 }
 
-  /* =========================
-    SKILLS SECTION
-  ========================= */
+  /* SKILLS SECTION*/
   .skills-section {
     position: relative;
     padding: 120px 20px;
@@ -439,24 +421,23 @@
     align-items: stretch;
   }
 
-  /* Skill Card */
   .skill-card {
     perspective: 1000px;
     height: 350px;
     width: 100%;
   }
 
-  /* Skill Card Image – FULL FIT */
+  /* Skill Card Image*/
   .card-front img,
   .card-back img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* mo-fill sa card */
-    border-radius: 22px;    /* same sa card */
+    object-fit: cover;    
+    border-radius: 22px;   
   }
 
   .card-front, .card-back {
-    position: relative; /* important para sa absolute positioning sa hint */
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,7 +447,7 @@
 
   .click-hint {
     position: absolute;
-    bottom: 15px; /* distance from bottom of card */
+    bottom: 15px;
     font-size: 12px;
     color: #d6cfc7;
     opacity: 0.7;
@@ -534,9 +515,7 @@
   .skill-card:hover .card-inner { box-shadow: 0 15px 30px rgba(212,0,0,0.45); }
   body[data-theme="light"] .skill-card:hover .card-inner { box-shadow: 0 15px 30px rgba(212,0,0,0.3); }
 
-  /* =========================
-    PROJECTS SECTION
-  ========================= */
+  /*PROJECTS SECTION*/
   .projects-section {
     position: relative;
     padding: 120px 20px;
@@ -615,13 +594,11 @@
   body[data-theme="light"] .project-content h3 { color: #111; }
   body[data-theme="light"] .project-content p { color: #444; }
 
-  /* =========================
-    BLOG SECTION
-  ========================= */
+  /*BLOG SECTION*/
   .blog-section {
     position: relative;
     padding: 120px 20px;
-    background-image: url('assets/blog.png'); /* Dark mode background */
+    background-image: url('assets/blog.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -631,26 +608,25 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.65);
     z-index: 0;
   }
 
   /* LIGHT MODE BACKGROUND */
   body[data-theme="light"] .blog-section {
-    background-image: url('assets/whiterose.png'); /* Light mode background */
+    background-image: url('assets/whiterose.png'); 
   }
 
   body[data-theme="light"] .blog-section::before {
-    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    background: rgba(255, 255, 255, 0.2);
   }
 
-  /* Container */
   .blog-container {
     max-width: 1200px;
     margin: auto;
     text-align: center;
     position: relative;
-    z-index: 1; /* above overlay */
+    z-index: 1;
   }
 
   /* Titles */
@@ -684,7 +660,6 @@
     color: #000000;
   }
 
-  /* Blog Grid */
   .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -694,7 +669,6 @@
     justify-items: center;
   }
 
-  /* Blog Card */
   .blog-card {
     width: 100%;
     max-width: 320px;
@@ -715,7 +689,6 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 
-  /* Blog Card Image */
   .blog-card img {
     width: 100%;
     height: 200px;
@@ -723,7 +696,6 @@
     display: block;
   }
 
-  /* Blog Content */
   .blog-content {
     padding: 22px;
     display: flex;
@@ -750,7 +722,6 @@
     color: #444;
   }
 
-  /* Hover Effect */
   .blog-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(212,0,0,0.45);
@@ -785,7 +756,7 @@
   }
 
   .blog-card {
-    flex: 0 0 300px; /* Width of each card */
+    flex: 0 0 300px;
     transition: transform 0.5s ease;
   }
 
@@ -816,9 +787,7 @@
 }
 
 
-  /* =========================
-    CONTACT SECTION
-  ========================= */
+  /*CONTACT SECTION*/
   .contact-section {
     position: relative;
     padding: 120px 20px;
@@ -984,7 +953,7 @@
   position: fixed;
   top: 25px;
   right: 25px;
-  z-index: 200; /* Default z-index */
+  z-index: 200;
   background: #d40000;
   color: #fff;
   border: none;
@@ -995,11 +964,11 @@
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* MOBILE: Lower z-index when menu is open */
+/* MOBILE:*/
 @media screen and (max-width: 768px) {
   .nav-left.show ~ .theme-toggle #theme-btn,
   .nav-right.show ~ .theme-toggle #theme-btn {
-    z-index: 998; /* Lower than mobile menu */
+    z-index: 998; 
   }
   
   /* Mobile menu items */
@@ -1016,13 +985,13 @@
     width: 100%;
     padding: 20px;
     list-style: none;
-    z-index: 1000; /* Higher than theme button when menu is open */
+    z-index: 1000; 
   }
   
   /* Hamburger button */
   .hamburger {
     display: flex;
-    z-index: 1001; /* Highest so it's always clickable */
+    z-index: 1001;
   }
   
   /* Theme button positioning for mobile */
@@ -1030,7 +999,7 @@
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 999; /* Lower than hamburger but higher than menu when closed */
+    z-index: 999; 
   }
 
   #theme-btn {
@@ -1051,7 +1020,7 @@ body[data-theme="light"] #theme-btn {
 
 @media screen and (max-width: 768px) {
   #theme-btn {
-    z-index: 150; /* Lower than mobile menu (999) */
+    z-index: 150;
     top: 15px;
     right: 15px;
     padding: 8px 12px;
@@ -1060,9 +1029,7 @@ body[data-theme="light"] #theme-btn {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/*FOOTER*/
 .footer {
   background: #1a0000;
   color: #f2e6d8;
@@ -1100,9 +1067,7 @@ body[data-theme="light"] .footer a {
   }
 }
 
-  /* ========================= 
-    RESPONSIVE
-  ========================= */
+  /* RESPONSIVE*/
   @media screen and (max-width: 768px) {
     .about-container, .skills-container {
       justify-content: center;
@@ -1169,11 +1134,8 @@ body[data-theme="light"] .footer a {
   }
 }
 
-/* ========================= 
-   HAMBURGER & MOBILE MENU
-========================= */
+/*HAMBURGER & MOBILE MENU */
 
-/* Hide hamburger on desktop */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1186,7 +1148,6 @@ body[data-theme="light"] .footer a {
   z-index: 1001;
 }
 
-/* Hamburger lines */
 .hamburger span {
   display: block;
   height: 3px;
@@ -1200,9 +1161,7 @@ body[data-theme="light"] .hamburger span {
   background: #1a1a1a;
 }
 
-/* ========================= 
-   MOBILE RESPONSIVE (768px and below)
-========================= */
+
 @media screen and (max-width: 768px) {
   /* Navbar adjustments */
   .navbar {
@@ -1216,7 +1175,6 @@ body[data-theme="light"] .hamburger span {
     max-height: 45px;
   }
 
-  /* HIDE nav items on mobile by default */
   .nav-left,
   .nav-right {
     display: none;
@@ -1242,8 +1200,6 @@ body[data-theme="light"] .hamburger span {
   .hamburger {
     display: flex;
   }
-
-  /* When menu is OPEN - SHOW ALL 6 ITEMS */
   .nav-left.show {
     display: flex;
   }
@@ -1251,8 +1207,6 @@ body[data-theme="light"] .hamburger span {
   .nav-right.show {
     display: flex;
   }
-
-  /* Menu items styling */
   .nav-left li,
   .nav-right li {
     border-bottom: 1px solid rgba(212, 0, 0, 0.3);
@@ -1302,9 +1256,6 @@ body[data-theme="light"] .hamburger span {
   }
 }
 
-/* ========================= 
-   EXTRA SMALL SCREENS (480px and below)
-========================= */
 @media screen and (max-width: 480px) {
   .navbar {
     gap: 8px;
