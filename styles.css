@@ -971,7 +971,7 @@
     filter: brightness(1.2);
   }
   
-  /* Theme Toggle Container */
+ /* Theme Toggle Container */
 .theme-toggle {
   position: absolute;
   top: 20px;
@@ -984,7 +984,7 @@
   position: fixed;
   top: 25px;
   right: 25px;
-  z-index: 200; /* above everything */
+  z-index: 200; /* Default z-index */
   background: #d40000;
   color: #fff;
   border: none;
@@ -995,9 +995,51 @@
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-#theme-btn:hover {
-  transform: scale(1.1);
-  background: #ff1a1a;
+/* MOBILE: Lower z-index when menu is open */
+@media screen and (max-width: 768px) {
+  .nav-left.show ~ .theme-toggle #theme-btn,
+  .nav-right.show ~ .theme-toggle #theme-btn {
+    z-index: 998; /* Lower than mobile menu */
+  }
+  
+  /* Mobile menu items */
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(0, 0, 0, 0.98);
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    z-index: 1000; /* Higher than theme button when menu is open */
+  }
+  
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    z-index: 1001; /* Highest so it's always clickable */
+  }
+  
+  /* Theme button positioning for mobile */
+  .theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999; /* Lower than hamburger but higher than menu when closed */
+  }
+
+  #theme-btn {
+    position: static;
+    top: auto;
+    right: auto;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
 }
 
 /* Light mode adjustment */
@@ -1007,15 +1049,16 @@ body[data-theme="light"] #theme-btn {
   border: 1px solid #d40000;
 }
 
-/* Responsive for mobile */
 @media screen and (max-width: 768px) {
   #theme-btn {
+    z-index: 150; /* Lower than mobile menu (999) */
     top: 15px;
     right: 15px;
-    padding: 8px 10px;
+    padding: 8px 12px;
     font-size: 18px;
   }
 }
+
 
 /* =========================
    FOOTER
